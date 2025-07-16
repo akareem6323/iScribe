@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imole Downtime Tool- iScribe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body class="bg-light">
+    <div class="container py-5">
+        <h1 class="mb-4 text-center">🩻 iScribe</h1>
+
+        <div class="alert alert-info text-center">
+            If launched from PACS, form fields will auto-fill using query parameters (e.g.,
+            <code>?PN=John&PID=12345&ACN=67890</code>)
+        </div>
+
+        <div class="input-group mb-4">
+            <span class="input-group-text">Search Tools</span>
+            <input type="text" class="form-control" id="toolSearch" placeholder="Type to filter..." />
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4" id="toolCards">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Default Report Template</h5>
+                        <p class="card-text">Submit a standardized imaging report using PACS-linked data.</p>
+                        <a href="/DefaultTemplate" class="btn btn-primary">Launch</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Downtime Logs</h5>
+                        <p class="card-text">View, generate, and manage downtime report logs.</p>
+                        <a href="/DowntimeLogs" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">CTAP Trauma</h5>
+                        <p class="card-text">Use this form to log CTAP trauma study details.</p>
+                        <a href="/CTAPTrauma" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">CT Chest Trauma</h5>
+                        <p class="card-text">Dedicated entry form for CT Chest Trauma exams.</p>
+                        <a href="/CTChestTrauma" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">CT Head + Face + C-Spine</h5>
+                        <p class="card-text">Complete trauma coverage for head, face, and c-spine.</p>
+                        <a href="/CTHeadFaceCspine" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">CT Head Only</h5>
+                        <p class="card-text">For isolated non-contrast or trauma CT head studies.</p>
+                        <a href="/CTHead" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cards here as needed -->
+        </div>
+    </div>
+
+    <script>
+        // Basic live search filter
+        const searchInput = document.getElementById('toolSearch');
+        const cards = document.querySelectorAll('#toolCards .col');
+
+        searchInput.addEventListener('input', () => {
+            const val = searchInput.value.toLowerCase();
+            cards.forEach(card => {
+                card.style.display = card.textContent.toLowerCase().includes(val) ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>

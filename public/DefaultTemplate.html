@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Default Template</title>
+    <style>
+        div.editable {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/DefaultTemplate" method="POST">
+            <p><strong> Patient Name:</strong> <span id="PN"></span></p>
+            <p><strong>Patient ID:</strong> <span id="PID"></span></p>
+            <p><strong>Accession Number:</strong> <span id="ACN"></span></p>
+            <p><strong>Study Description:</strong> <span id="SD"></span></p>
+
+            <label for="procedures">Procedures:</label><br>
+            <textarea id="procedures" name="procedures" rows="4" cols="100" required></textarea><br><br>
+
+            <label for="technique">Technique:</label><br>
+            <textarea id="technique" name="technique" rows="4" cols="100" required></textarea><br><br>
+
+            <label for="findings">Findings:</label><br>
+            <textarea id="findings" name="findings" rows="4" cols="100" required></textarea><br><br>
+
+            <label for="impression">Impression:</label><br>
+            <textarea id="impression" name="impression" rows="4" cols="100" required></textarea><br><br>
+
+    </div><br>
+
+
+    <input type="hidden" id="PNInput" name="PN">
+    <input type="hidden" id="PIDInput" name="PID">
+    <input type="hidden" id="ACNInput" name="ACN">
+    <input type="hidden" id="SDInput" name="SD">
+    <input type="hidden" id="EDTInput" name="EDT">
+    <input type="hidden" id="OPInput" name="OP">
+    <input type="hidden" id="ARInput" name="AR">
+    <input type="hidden" id="RDTInput" name="RDT">
+    <input type="hidden" id="SNInput" name="SN">
+
+    <div class="action-button">
+        <button type="submit">Submit</button>
+    </div>
+    </form>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+
+    Patient Name: 
+    Patient ID: 123456
+    Accession Number: 78901234
+    Study Description: 
+
+    PROCEDURES: TEST
+    TECHNIQUE: TEST
+    FINDINGS: TEST
+    IMPRESSION: TEST
+  

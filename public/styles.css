@@ -1,0 +1,266 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 28px;
+}
+
+.metadata {
+    margin-bottom: 20px;
+}
+
+.comment-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+} */
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.red-italic-bold {
+    font-style: italic;
+    font-weight: bold;
+    color: red;
+}
+
+#comments {
+    width: calc(100% - 50px);
+    /* Set the width to 300 pixels */
+    height: 100px;
+    /* Set the height to 150 pixels */
+    resize: none;
+}
+
+.checkboxes label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    /* Add some spacing between the labels */
+    font-size: 18px;
+}
+
+.checkboxes input[type="checkbox"] {
+    vertical-align: middle;
+    margin-right: 8px;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #007bff;
+    /* Border color blue */
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkboxes input[type="checkbox"]:checked {
+    background-color: #007bff;
+    /* Background color blue when checked */
+    border: 3px solid #007bff;
+}
+
+.checkboxes input[type="checkbox"]:checked::before {
+    content: '\2713';
+    /* Unicode checkmark symbol */
+    display: block;
+    color: #fff;
+    /* White color for checkmark */
+    text-align: center;
+    font-size: 20px;
+}
+
+#successMessage {
+    font-size: 18px;
+    color: green;
+    background-color: lightyellow;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.action-button button {
+    padding: 12px 24px;
+    /* Adjust padding for button */
+    margin: 10px 0;
+    /* Add some space around the button */
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    /* Adjust font size */
+    font-weight: bold;
+    /* Make text bold */
+    text-transform: uppercase;
+    /* Convert text to uppercase */
+}
+
+.action-button {
+    text-align: center;
+}
+
+.action-button button:hover {
+    background-color: #0056b3;
+    /* Change background color on hover */
+}
+
+ul {
+    list-style-type: none;
+    /* Remove default bullet points */
+    padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margin */
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid #007bff;
+    max-width: 100%;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+tr td:nth-child(1) {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+tr td:nth-child(2) {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+tr td:nth-child(3) {
+    background-color: #3498db;
+    color: #fff;
+}
+
+tr td:nth-child(4) {
+    background-color: #e67e22;
+    color: #fff;
+}
+
+tr td:nth-child(5) {
+    background-color: #9b59b6;
+    color: #fff;
+}
+
+tr td:nth-child(6) {
+    background-color: #34495e;
+    color: #fff;
+}
+
+tr td:nth-child(7) {
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+tr td:nth-child(8) {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    /* Center the links */
+}
+
+.menu a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+    /* Link color */
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+    /* Hover color */
+}
+
+.menu a.active {
+    font-weight: bold;
+    /* Style the active link */
+    color: #ff5722;
+    /* Active link color */
+}
+
+.menu img {
+    display: block;
+    margin: 0 auto;
+}
+
+.peer-learning-header {
+    text-align: center;
+}
+
+#searchInput {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-left: 2050px auto;
+    display: block;
+    /* Move the search input to the right */
+}

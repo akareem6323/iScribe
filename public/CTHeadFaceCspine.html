@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CT Chest Report</title>
+    <style>
+        div.editable {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" method="post">
+            <label for="proceduresModule">Patient Name: John Cena</label><br>
+            <label for="proceduresModule">Accession Number: 987654321</label><br>
+            <label for="proceduresModule">Study: CT HEAD FACE AND C SPINE</label><br>
+
+            <div contenteditable="true">
+                <p><b><span style="color: blue;">PROCEDURES:</span></b> ...</p>
+
+                <p><b><span style="color: blue;">TECHNIQUE:</span></b> Axial images of the head were obtained from the
+                    level of C2 to the high convexity without contrast. Coronal and sagittal
+                    images were reconstructed. High-resolution axial, coronal and sagittal images of the face were
+                    reformatted. In addition,
+                    axial images of the cervical spine were obtained followed by coronal and sagittal reconstructions.
+                </p>
+
+                <p><b><span style="color: blue;">FINDINGS:</span></b></p>
+
+                Ventricles and sulci are within normal limits for age. No acute intracranial hemorrhage, mass effect or
+                hydrocephalus.
+                Gray-white differentiation is intact.<br><br>
+
+                No acute facial fractures. Globes and orbits are unremarkable. Paranasal sinuses and mastoid air cells
+                are clear.<br><br>
+
+                No cervical spine acute fractures or dislocations. Prevertebral soft tissues are within normal limits.
+                No severe
+                degenerative changes.<br><br>
+
+                Imaged lung apices are without focal opacity or pneumothorax.<br><br>
+
+
+                <p><b><span style="color: blue;">IMPRESSION:</span></b></p>
+                ---impression---
+            </div><br>
+
+
+            <div style="text-align:center;"><input type="submit" value="Submit"></div>
+        </form>
+    </div>
+</body>
+
+</html>

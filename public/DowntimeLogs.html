@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>iScribe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- iScribe Header -->
+    <div style="text-align: center; margin-top: 20px;">
+        <h1 style="font-family: sans-serif;">
+            <span style="font-size: 2.2rem;">🩻</span>
+            <span style="font-weight: 600;">iScribe</span>
+        </h1>
+
+        <div class="menu">
+            <a href="/DowntimeLogs">Downtime Report Logs</a>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+    </div><br>
+
+    <div class="table-container">
+        <div id="DowntimeLogsTable"></div>
+    </div>
+
+    <script>
+        fetch('/getDowntimeLogs')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('DowntimeLogsTable').innerHTML += data;
+            })
+            .catch(error => console.error('Error fetching Downtime Logs:', error));
+
+        document.getElementById('searchInput').addEventListener('input', function () {
+            var keyword = this.value.trim().toLowerCase();
+            filterRows(keyword);
+        });
+
+        function filterRows(keyword) {
+            var table = document.getElementById('DowntimeLogsTable');
+            var rows = table.getElementsByTagName('tr');
+
+            for (var i = 1; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName('td');
+                var showRow = false;
+
+                for (var j = 0; j < cells.length; j++) {
+                    var cellText = cells[j].innerText || cells[j].textContent;
+                    if (cellText.toLowerCase().includes(keyword)) {
+                        showRow = true;
+                        break;
+                    }
+                }
+
+                rows[i].style.display = showRow ? '' : 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>
